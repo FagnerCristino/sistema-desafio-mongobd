@@ -1,4 +1,4 @@
-package com.fagnerdev.desafiosistema;
+package com.fagnerdev.desafiosistema.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class Pessoa {
 
 
-        @Id
+
         private Long id;
         private String nome;
         private Integer idade;
