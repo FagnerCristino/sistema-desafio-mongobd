@@ -17,17 +17,18 @@ public class PessoaController {
     private PessoaService service;
 
 
-    @GetMapping
-    public ResponseEntity<List<Pessoa>> findAll(){
-        List<Pessoa> list = service.findAll();
-        return ResponseEntity.ok().body(list);
-    }
     @GetMapping(value = "/{id}")
     public ResponseEntity<Pessoa> findById( @PathVariable Long id){
         Pessoa obj = service.findById(id);
         return ResponseEntity.ok().body(obj);
 
     }
+    @GetMapping
+    public ResponseEntity<List<Pessoa>> findAll(){
+        List<Pessoa> list = service.findAll();
+        return ResponseEntity.ok().body(list);
+    }
+
 
     @PostMapping
     public ResponseEntity<Pessoa> save(@RequestBody Pessoa obj){
